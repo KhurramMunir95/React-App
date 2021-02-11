@@ -8,7 +8,6 @@ function App() {
     <div className="App">
     <Home />
       <h1 style={{color: 'white', background: 'red' }}>{app}</h1>
-      <a href={url}>Click this link</a>
     </div>
   );
 }

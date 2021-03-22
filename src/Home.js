@@ -30,7 +30,6 @@ const Home = () => {
   return (
     <div>
       <h1>Home Page</h1>
-
         <Posts posts={posts} title="All Posts" />
         <Posts posts={posts.filter((post) => post.id === 1)} title="Special Post" />
     </div>

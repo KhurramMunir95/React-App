@@ -1,13 +1,11 @@
 import './App.css';
-import Home from './Home'; 
+import Tasks from './Tasks';
 
 function App() {
-  const app = 'This is a React App';
-  const url = 'https://www.google.com/';
+
   return (
     <div className="App">
-    <Home />
-      <h1 style={{color: 'white', background: 'red' }}>{app}</h1>
+      <Tasks />
     </div>
   );
 }

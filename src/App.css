@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.finished{
+  text-decoration: line-through;
+  color: crimson;
+}
+
+div#task-list{
+  background-color: rgb(181 255 173);
+  width: 400px;
+  margin: 10px auto auto auto;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: raleway;
+  border-radius: 4px;
+  transition: 1s;
+  border: 4px solid transparent;
+}
+
+div#task-list:hover{
+  border-color: green;
+}
+
+.btn-green{
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-green:hover{
+  opacity: 0.8;
+}
+.form-control{
+  padding: 5px;
+  border: 1px solid green;
+  border-radius: 5px;
+}

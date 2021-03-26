@@ -69,7 +69,27 @@ div#task-list:hover{
   margin-left: 10px;
 }
 
-.btn-green:hover{
+.btn-blue{
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-red{
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover{
   opacity: 0.8;
 }
 .form-control{

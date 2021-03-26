@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Task from './Task';
 import AddTask from './AddTask';
+import { FaPlus, FaWindowClose } from 'react-icons/fa';
 
 const Tasks = () => {
+
+    const [ShowAddTask, setShowAddTask] = useState(false);
 
     const [tasks, setTask] = useState([
             {
@@ -37,9 +40,14 @@ const Tasks = () => {
         setTask(tasks.map((task)=> task.id === id ? {...task, status: !task.status} : task))
     }
 
+    const showTask = () =>{
+        setShowAddTask(!ShowAddTask)
+    }
+    
     return (
-        <div>
-            <AddTask onAdd={addTask} />
+        <div style={{paddingTop: '20px'}}>
+            <button className={ShowAddTask ? 'btn-red' : 'btn-blue'} onClick={showTask}>{ ShowAddTask ? <FaWindowClose style={{verticalAlign: 'middle'}}/> : <FaPlus style={{verticalAlign: 'middle'}}/> } { ShowAddTask ? 'Close' : 'Add New Task'}</button>
+            { ShowAddTask && <AddTask onAdd={addTask} /> }
            { tasks.length > 0 ? <Task tasks={tasks}  removeTask={removeTask} onFinish={onFinish}  
            /> : <h3>No Tasks</h3>}
         </div>

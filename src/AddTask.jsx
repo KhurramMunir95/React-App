@@ -13,11 +13,13 @@ const AddTask = ({onAdd}) => {
         }
         else{
             onAdd({name, status});
+            setName('');
         }
     }
 
     return (
         <div style={{paddingTop: '30px'}}>
+            
             <form onSubmit={onSubmit}>
                 <input className="form-control" type="text" placeholder="task" value={name} onChange={(e) => setName(e.target.value)} />
                 {/* <input type="checkbox" checked={status} value={status} onChange={(e) => setStatus(e.currentTarget.checked)} /> */}
